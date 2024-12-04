@@ -1,0 +1,42 @@
+input.square {
+    width: 35px;      /* Default width */
+    height: 35px;     /* Default height */
+    text-align: center; /* Optional: center text horizontally */
+    font-size: 22px;   /* Default font size */
+    border: 2px solid #000; /* Set border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: inline-block;
+    border-radius: var(--bs-border-radius);
+}
+
+/* Medium screens (tablets and larger) */
+@media (min-width: 768px) {
+    input.square {
+        width: 50px;      /* Adjust width */
+        height: 50px;     /* Adjust height */
+        font-size: 26px;  /* Adjust font size */
+    }
+}
+
+/* Large screens (desktops and larger) */
+@media (min-width: 1500px) {
+    input.square {
+        width: 75px;     /* Adjust width */
+        height: 75px;    /* Adjust height */
+        font-size: 32px;  /* Adjust font size */
+    }
+}
+
+/* Border styles for specific rows and columns */
+.border-bottom {
+    border-bottom: 4px solid #000 !important; /* Ensures bottom border is applied */
+}
+
+.border-right {
+    border-right: 4px solid #000 !important;  /* Ensures right border is applied */
+}
+
+/* Mark blue on right-click */
+.blue-box {
+    background-color: lightblue;
+}
