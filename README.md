@@ -1,8 +1,7 @@
 # Sudoku Solver
-## Video Demo:  <URL HERE>
+## Video Demo:  https://youtu.be/mSXut8cYNHI
 ## Description:
 Sudokusolver is a web app where users can input sudokus and solve them with a click of a button. Users may also play sudoku.
-
 
 ## Motivation:
 I've always been interested in puzzles that are simple to understand but actually are profoundly deep beyond the surface, and Sudoku seems like a fun choice to implement.
