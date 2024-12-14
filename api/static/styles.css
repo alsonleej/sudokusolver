@@ -1,0 +1,39 @@
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* for collisions messages and flash */
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/* textboxes */
+.explain ul {
+    list-style-type: none;
+}
+
+.boxed {
+    border: 2px solid #000; /* Set border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: inline-block;
+    border-radius: var(--bs-border-radius);
+}
+
+.date {
+    float: right;
+    font-size: 0.7em;
+    color: cadetblue;
+}
+
+/* import */
+#importinput {
+    width: 90%;          /* Default width is 90% of the screen width */
+    max-width: 81ch;     /* Maximum width is 81 characters */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
