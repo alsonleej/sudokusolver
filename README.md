@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sudoku Solver
 ## Video Demo:  <URL HERE>
 ## Description:
@@ -302,6 +301,6 @@ List of all my dependencies. This allows for environments to automatically insta
 
 To define the entry point api/app.py for Vercel deployment.
 
-=======
 
->>>>>>> 549b9aedf589acf0b015dd69c3f533ea32843946
+
+
