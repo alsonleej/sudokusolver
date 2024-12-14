@@ -1,0 +1,51 @@
+ {% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+    <div class="my-3">
+        <h1>Sudoku Solver</h1>
+        <h2>Solution!</h2>
+    </div>
+
+    <div class="my-3">
+
+        <table class="table-hover" style="display: flex; align-items: center; justify-content: center;">
+            {% for row in grid %}
+            <tr>
+                {% for cell in row %}
+                    {% set row =  cell//10 %}
+                    {% set col =  cell%10 %}
+                    {% set val = soln[row][col] %}
+                        <td>
+                            <input class="square 
+                            {{ 'border-bottom' if row == 2 or row == 5 or row == 8 else '' }} 
+                            {{ 'border-right' if col == 2 or col == 5 or col == 8 else '' }}"
+                            
+                            style="{% if val == original[row][col] %} font-weight: bold;
+                                   {% elif val == attempt[row][col] %} color: green;
+                                   {% else %} {% endif %}"
+                            
+                            value="{{ val }}" readonly>
+
+                        </td> <!-- the presence of autocomplete="off" here is actually very interesting. It is so that, when users submit and go to solved.html, and then click the BACK button in the browser the browser will not load the user's previous inputs from its internal cache. In solver.html, instead of preventing this behaviour entirely, a flag "refresh" is used to conditionally load the user's previously inputted values or not, based on the consideration that the user might have wanted to change their input after viewing solved.html.-->
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a class="btn btn-dark me-1" href="/export?solved=1" id="exportbtn" title="Copies current grid as 81-digit string">Export</a>
+        <!-- take note the href this a is linked to is preventDefault'ed. What actually happens is the JS takes the href, fetches the 81-digit string from the backend, then copies it into the clipboard.-->
+
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initexportbtn();
+
+        });
+    </script>
+{% endblock %}
