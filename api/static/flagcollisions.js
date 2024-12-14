@@ -207,8 +207,6 @@ function highlight(){
             // Coords of topleft of bigbox
             row = (row - row % 3); 
             col = (col - col % 3);
-            console.log("row"+row);
-            console.log("col"+col);
             for (let r = row; r < row + 3; r = r + 1){
                 for (let c = col; c < col + 3; c = c + 1){
                     let name = (r === 0) ? `${c}` : `${r}${c}`; // because name in input 0th row is just a single digit
